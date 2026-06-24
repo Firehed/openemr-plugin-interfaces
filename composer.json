@@ -1,0 +1,21 @@
+{
+    "name": "openemr/plugin-interfaces",
+    "type": "library",
+    "require": {},
+    "require-dev": {
+        "phpstan/phpstan": "^2.2",
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "phpstan/phpstan-deprecation-rules": "^2.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenEMR\\Plugin\\": "src/"
+        }
+    },
+    "scripts": {
+        "phpstan": "phpstan analyze"
+    }
+}
