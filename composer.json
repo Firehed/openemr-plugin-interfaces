@@ -1,7 +1,9 @@
 {
     "name": "openemr/plugin-interfaces",
     "type": "library",
-    "require": {},
+    "require": {
+        "symfony/console": "^7.3"
+    },
     "require-dev": {
         "phpstan/phpstan": "^2.2",
         "phpstan/phpstan-strict-rules": "^2.0",

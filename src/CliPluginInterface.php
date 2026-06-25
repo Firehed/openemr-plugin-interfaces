@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace OpenEMR\Plugin;
 
+use Symfony\Component\Console\Command\Command;
+
+/**
+ * @phpstan-type CommandLike Command|callable-object
+ */
 interface CliPluginInterface extends PluginInterface
 {
     /**
@@ -16,7 +21,7 @@ interface CliPluginInterface extends PluginInterface
      * Invokble commands (which do not need to extend `Command` nor have an
      * `execute()` method) are preferred.
      *
-     * @return class-string[]
+     * @return class-string<CommandLike>[]
      */
     public static function getCommandClasses(): array;
 }
