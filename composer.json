@@ -2,6 +2,7 @@
     "name": "openemr/plugin-interfaces",
     "type": "library",
     "require": {
+        "slim/slim": "^4.15",
         "symfony/console": "^7.3"
     },
     "require-dev": {
