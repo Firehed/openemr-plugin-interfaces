@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace OpenEMR\Plugin;
 
+use Psr\Container\ContainerInterface;
 use Slim\Routing\RouteCollectorProxy;
 
 interface ApiPluginInterface extends PluginInterface
@@ -22,6 +23,8 @@ interface ApiPluginInterface extends PluginInterface
      *   $routes->get('/path', MyController::class);
      *
      * Controllers must be registered in the plugin's DI config.
+     *
+     * @param RouteCollectorProxy<ContainerInterface> $routes
      */
     public static function registerRoutes(RouteCollectorProxy $routes): void;
 }
